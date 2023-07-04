@@ -1,0 +1,117 @@
+.create-slice {
+  background-color: #ffffff;
+  border: 1px solid #f4f2f4;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 6rem;
+  cursor: pointer;
+  margin: 1rem 0;
+
+  &__btn {
+    border-radius: 0.8rem;
+    height: 2.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon-div {
+      height: 1.6rem;
+      width: 1.6rem;
+
+      display: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+      border-radius: 100%;
+
+      img {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    .price-svg {
+      fill: #f3ba63;
+    }
+    .article-svg {
+      fill: #5bb98c;
+    }
+    .hero-svg {
+      fill: #aa99ec;
+    }
+
+    &--price {
+      background-color: #fff4d5;
+
+      &__icon-div {
+        background-color: #f3ba63;
+      }
+    }
+
+    &--article {
+      background-color: #e9f9ee;
+
+      &--icon-div {
+        background-color: #5bb98c;
+      }
+    }
+
+    &--hero {
+      background-color: #f5f2ff;
+
+      &--icon-div {
+        background-color: #aa99ec;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    margin-top: 0.4rem;
+    color: #6f6e77;
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    // for some odd reason, BEM nesting won't work here and I am running out of time to find out why
+    box-shadow: 0px 2px 7px 0px #0000000a;
+
+    p {
+      color: #1a1523;
+    }
+
+    .create-slice__btn--price {
+      background-color: #ffecbc;
+    }
+    .create-slice__btn--article {
+      background-color: #ddf3e4;
+    }
+    .create-slice__btn--hero {
+      background-color: #ede9fe;
+    }
+
+    .price-svg {
+      fill: #ffb224;
+    }
+    .hero-svg {
+      fill: #6e56cf;
+    }
+    .article-svg {
+      fill: #30a46c;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    height: 13.6rem;
+    width: 25.6rem;
+    margin: unset;
+    padding: 2.4rem;
+
+    &__btn {
+      height: 8.8rem;
+      width: 20.8rem;
+    }
+  }
+}

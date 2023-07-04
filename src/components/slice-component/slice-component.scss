@@ -1,0 +1,116 @@
+.slice-content {
+  margin: 2rem 0;
+  background-color: #ffffff;
+  min-height: 15rem;
+  height: auto;
+  padding: 2rem;
+
+  &--addHeight {
+    height: 25rem;
+  }
+
+  &__wrapper {
+    &__top-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h5 {
+        color: #1a1523;
+        margin-top: 0.4rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.6rem;
+        letter-spacing: 0px;
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+
+      button {
+        background: linear-gradient(0deg, #fff0ee, #fff0ee),
+          linear-gradient(0deg, #fff8f7, #fff8f7);
+        border: 1px solid #fff0ee;
+        color: #e54d2e;
+        height: 3.2rem;
+        width: 12.1rem;
+        border-radius: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.6px;
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__input-div {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #f4f2f4;
+      border-radius: 0.8rem;
+      margin-top: 0.8rem;
+
+      .input-wrapper {
+        display: inherit;
+        flex-direction: column;
+        min-width: 6.4rem;
+        max-width: 80.8rem;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: unset;
+        }
+
+        input {
+          border: 1px solid #dcdbdd;
+          border-radius: 0.8rem;
+          height: 3.2rem;
+          width: 100%;
+
+          &[type="color"] {
+            padding: 0.3rem;
+            background-color: #ffffff;
+            width: 6.4rem;
+          }
+        }
+
+        .error {
+          width: calc(100% - 10px);
+          text-align: left;
+          color: red;
+          font-weight: 500;
+          margin: 5px 5px 10px;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    min-height: 25.6rem;
+    max-height: 31.2rem;
+    padding: 4rem;
+
+    &--addHeight {
+      min-height: 31.2rem;
+      max-height: unset;
+      height: auto;
+    }
+
+    &__wrapper {
+      &__top-div {
+        h5 {
+          margin-top: 0.8rem;
+        }
+      }
+      &__input-div {
+        padding: 2.4rem;
+
+        .input-wrapper {
+          margin-bottom: 2.4rem;
+        }
+      }
+    }
+  }
+}
